@@ -8,6 +8,9 @@ public class MissingNumber {
         // one missing number
         printMissingNumber(new int[]{1, 2, 3, 4, 6}, 6);
 
+        // three missing number
+        printMissingNumber(new int[]{1, 2, 3, 4, 6, 9, 8}, 10);
+
         // Only one missing number in array
         int[] iArray = new int[]{1, 2, 3, 5};
         int missing = getMissingNumber(iArray, 5);
@@ -36,16 +39,16 @@ public class MissingNumber {
         BitSet bitSet = new BitSet(count);
 
         for (int number : numbers) {
-            bitSet.set(number - 1);
+            bitSet.set(number);
         }
 
         System.out.printf("Missing numbers in integer array %s, with total number %d is %n",
                 Arrays.toString(numbers), count);
-        int lastMissingIndex = 0;
+        int lastMissingIndex = 1;
 
         for (int i = 0; i < missingCount; i++) {
             lastMissingIndex = bitSet.nextClearBit(lastMissingIndex);
-            System.out.println(++lastMissingIndex);
+            System.out.println(lastMissingIndex++);
         }
 
     }
