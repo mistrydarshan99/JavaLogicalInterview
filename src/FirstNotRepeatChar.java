@@ -7,9 +7,9 @@ public class FirstNotRepeatChar {
 
 //        System.out.println("First not repeat char in Swiss is " + getFirstNonRepeatedChar("swiss"));
 
-//        System.out.println("First not repeat char in Swiss is " + firstNonRepeatingChar("swissh"));
+        System.out.println("First not repeat char in Swiss is " + firstNonRepeatingChar("swissh"));
 
-        System.out.println("First not repeat char in Swiss is " + firstNonRepeatedCharacter("swissh"));
+//        System.out.println("First not repeat char in Swiss is " + firstNonRepeatedCharacter("swissh"));
 
     }
 

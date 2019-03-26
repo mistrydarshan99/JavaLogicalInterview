@@ -5,8 +5,8 @@ import java.util.Set;
 public class PairIntSum {
 
     public static void main(String[] args) {
-//        int[] numbers = { 2, 4, 3, 5, 7, 8, 9 };
-//        prettyPrint(numbers, 7);
+        int[] numbers = { 2, 4, 3, 5, 7, 8, 9 };
+        prettyPrint(numbers, 7);
 
         int[] numbersWithDuplicates = { 2, 4, 3, 5, 6, -2, 4, 7, 8, 9 };
         prettyPrint(numbersWithDuplicates, 7);
@@ -19,9 +19,9 @@ public class PairIntSum {
         System.out.println("Given array : " + Arrays.toString(givenArray));
         System.out.println("Given sum : " + givenSum);
         System.out.println("Integer numbers, whose sum is equal to value : " + givenSum);
-//        printPairs(givenArray, givenSum);
-//        printPairsUsingSet(givenArray, givenSum);
-        printPairsUsingTwoPointers(givenArray, givenSum);
+        printPairs(givenArray, givenSum);
+        printPairsUsingSet(givenArray, givenSum);
+//        printPairsUsingTwoPointers(givenArray, givenSum);
     }
 
     /**
