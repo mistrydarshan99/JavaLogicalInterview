@@ -6,7 +6,12 @@ public class SubArraySum {
 
 
 //        findSubArray(new int[]{42, 15, 12, 8, 6, 32}, 26);
-        subArraySum(new int[]{42, 15, 12, 8, 6, 32}, 26);
+        long time1 = System.currentTimeMillis();
+        int i = subArraySum(new int[]{42, 15, 12, 8, 6, 32}, 26);
+        long time2 = System.currentTimeMillis();
+        System.out.println(time2 - time1);
+
+
     }
 
     static void findSubArray(int[] inputArray, int inputNumber) {
@@ -82,4 +87,6 @@ public class SubArraySum {
         System.out.println("No subarray found");
         return 0;
     }
+
+
 }
