@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class RomanToInt {
 
@@ -15,35 +16,30 @@ public class RomanToInt {
         romanKey.put('D', 500);
         romanKey.put('M', 1000);
 
-//        romanToIntSum("IV");
-//        romanToIntSum("XIV");
-//        romanToIntSum("LXIV");
-        romanToIntSum("XCIV");
+        System.out.println(romanToInt("IV"));
+        System.out.println(romanToInt("XIV"));
+        System.out.println(romanToInt("LXIV"));
+        System.out.println(romanToInt("XCIV"));
     }
 
-    private static int romanToIntSum(String romanNumber) {
-        char[] chars = romanNumber.toCharArray();
-        int length = chars.length;
-        int sum = 0;
-        for (int i = length - 1; i >= 0; i--) {
-            char aChar = chars[i];
-            if (aChar == 'V' || aChar == 'X') {
-                if (i - 1 >= 0) {
-                    char previousChar = chars[i - 1];
-                    if (previousChar == 'I') {
-                        sum += (romanKey.get(aChar) - romanKey.get(previousChar));
-                        i -= 1;
-                    } else {
-                        sum += romanKey.get(aChar);
-                    }
-                } else{
-                    sum += romanKey.get(aChar);
-                }
+    public static int romanToInt(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
+        int len = s.length();
+        int sum = map.get(s.charAt(len - 1));
+        for (int i = len - 2; i >= 0; --i) {
+            if (map.get(s.charAt(i)) < map.get(s.charAt(i + 1))) {
+                sum -= map.get(s.charAt(i));
             } else {
-                sum = sum + romanKey.get(aChar);
+                sum += map.get(s.charAt(i));
             }
         }
-        System.out.println("Sum is " + sum);
-        return 0;
+        return sum;
     }
 }
