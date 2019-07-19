@@ -1,10 +1,11 @@
 public class LongestCommanPrefixArray {
 
     public static void main(String[] args) {
-  longestCommonPrefix(new String[]{"flower","flow","flight"});
+        String commonPrefix = longestCommonPrefix(new String[]{"flower", "flow", "flight"});
+        System.out.println(commonPrefix);
     }
 
-    public static String longestCommonPrefix(String[] strs) {
+    private static String longestCommonPrefix(String[] strs) {
         int len = strs.length;
         if (len == 0) return "";
         int minLen = Integer.MAX_VALUE;
