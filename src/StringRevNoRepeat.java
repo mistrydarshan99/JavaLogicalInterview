@@ -3,8 +3,8 @@ import java.util.HashMap;
 public class StringRevNoRepeat {
 
     public static void main(String[] args) {
-        seconTrickRev("abbac"); //output: caba
-        seconTrickRev("abbbaa"); //output: aba
+        System.out.println(seconTrickRev("abbac")); //output: caba
+        System.out.println(seconTrickRev("abbbaa")); //output: aba
     }
 
     private static String stringRev(String str) {
@@ -31,7 +31,6 @@ public class StringRevNoRepeat {
                 stringBuilder.append(chars[i]);
             }
         }
-        System.out.println(stringBuilder.toString());
-        return "";
+        return stringBuilder.toString();
     }
 }
