@@ -45,9 +45,7 @@ public class LongestSubString {
         }
 
         System.out.println("Input String : " + inputString);
-
         System.out.println("The longest substring : " + longestSubstring);
-
         System.out.println("The longest Substring Length : " + longestSubstringLength);
     }
 

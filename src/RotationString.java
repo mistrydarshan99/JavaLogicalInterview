@@ -1,5 +1,8 @@
 public class RotationString {
     public static void main(String[] args) {
+
+        generateRotationString();
+
         String s1 = "JavaJ2eeStrutsHibernate";
 
         String s2 = "StrutsHibernateJavaJ2ee";
@@ -21,5 +24,17 @@ public class RotationString {
                 System.out.println("s2 is not rotated version of s1");
             }
         }
+    }
+
+    private static void generateRotationString() {
+        String str = "geeks";
+        for (int i = 0; i < str.length(); i++) {
+            String joinString = str.substring(0, i + 1);
+            String cyclicStr = str.substring(i + 1) + joinString;
+            System.out.println(cyclicStr);
+        }
+
+        /*Check string is alphanumeric or not*/
+        boolean isAlphaNumeric = str.chars().allMatch(Character::isLetterOrDigit);
     }
 }

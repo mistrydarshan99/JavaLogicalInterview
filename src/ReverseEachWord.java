@@ -26,10 +26,10 @@ public class ReverseEachWord {
     public static void main(String[] args) {
         reverseEachWordOfString("Java Concept Of The Day");
 
-        reverseEachWordOfString("Java J2EE JSP Servlets Hibernate Struts");
+     /*   reverseEachWordOfString("Java J2EE JSP Servlets Hibernate Struts");
 
         reverseEachWordOfString("I am string not reversed");
 
-        reverseEachWordOfString("Reverse Me");
+        reverseEachWordOfString("Reverse Me");*/
     }
 }

@@ -1,7 +1,7 @@
 public class PreservingSpaceString {
 
     public static void main(String[] args) {
-        reverseString("I Am Not String");
+        reverseString("I Am");
 
 //        reverseString("JAVA JSP ANDROID");
 

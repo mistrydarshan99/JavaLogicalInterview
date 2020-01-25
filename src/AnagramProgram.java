@@ -1,6 +1,10 @@
 import java.util.Arrays;
 
+/**
+ * An anagram of a string is another string that contains same characters, only the order of characters can be different
+ */
 public class AnagramProgram {
+
     static void isAnagram(String s1, String s2) {
         //Removing all white spaces from s1 and s2
 

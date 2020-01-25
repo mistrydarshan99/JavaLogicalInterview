@@ -1,7 +1,7 @@
 public class LongestCommanPrefixArray {
 
     public static void main(String[] args) {
-        String commonPrefix = longestCommonPrefix(new String[]{"flower", "flow", "flight"});
+        String commonPrefix = longestCommonPrefix(new String[]{"flower", "ftow", "flight"});
         System.out.println(commonPrefix);
     }
 
@@ -12,10 +12,15 @@ public class LongestCommanPrefixArray {
         for (String str : strs) {
             minLen = Math.min(minLen, str.length());
         }
-        for (int j = 0; j < minLen; ++j)
-            for (int i = 1; i < len; ++i)
-                if (strs[0].charAt(j) != strs[i].charAt(j))
+        for (int j = 0; j < minLen; ++j) {
+            for (int i = 1; i < len; ++i) {
+                char fromFirstString = strs[0].charAt(j);
+                char fromOtherString = strs[i].charAt(j);
+                if (fromFirstString != fromOtherString) {
                     return strs[0].substring(0, j);
+                }
+            }
+        }
         return strs[0].substring(0, minLen);
     }
 }
