@@ -6,7 +6,9 @@ public class TwoSum {
 
         int[] ints = twoSum(new int[]{2, 7, 11, 15}, 9);
 
-        twoSumHashMap(new int[]{2, 7, 11, 15}, 9);
+        int[] ints1 = twoSumHashMap(new int[]{2, 7, 11, 15}, 9);
+
+        System.out.println(ints1.toString());
 
     }
 

@@ -3,6 +3,7 @@ public class PalindromNumber {
     public static void main(String[] args) {
 //        System.out.println("isPalindromNumbre " + isPalindromNumbre(-121));
         System.out.println("isPalindromNumbre " + isPalindromNumbre(13231));
+        System.out.println(isPalindromeSecondTrick(13231));
     }
 
     private static boolean isPalindromNumbre(int x) {

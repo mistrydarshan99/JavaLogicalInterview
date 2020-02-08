@@ -2,10 +2,13 @@ public class PreservingSpaceString {
 
     public static void main(String[] args) {
         reverseString("I Am");
+        reverseStringMethodTwo("I Am");
 
 //        reverseString("JAVA JSP ANDROID");
+//        reverseStringMethodTwo("JAVA JSP ANDROID");
 
 //        reverseString("1 22 333 4444 55555");
+//        reverseStringMethodTwo("1 22 333 4444 55555");
     }
 
     static void reverseString(String inputString) {
@@ -50,5 +53,27 @@ public class PreservingSpaceString {
         }
 
         System.out.println(inputString + " ---> " + String.valueOf(resultArray));
+    }
+
+    private static void reverseStringMethodTwo(String str) {
+        int start = 0, end = str.length() - 1;
+        StringBuilder reverseString = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) != ' ') {
+                char letter = str.charAt(end);
+                if (letter != ' ') {
+                    reverseString.append(letter);
+                    end--;
+                } else {
+                    end--;
+                    reverseString.append( str.charAt(end));
+                    end--;
+                }
+            } else {
+                reverseString.append(" ");
+            }
+        }
+        System.out.println(reverseString.toString());
     }
 }
